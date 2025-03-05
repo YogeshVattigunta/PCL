@@ -29,7 +29,7 @@ def draw_contour(image, contour):
     return image
 
 # Load and process the image
-image_path = "sample1.jpg"  # Change this to your image filename
+image_path = "sample1.jpg"
 image, edged = preprocess_image(image_path)
 
 # Detect document border
@@ -38,7 +38,7 @@ document_contour = find_document_contour(edged)
 # Draw the detected border
 result = draw_contour(image.copy(), document_contour)
 
-# Display using Matplotlib instead of cv2.imshow()
+# Display using Matplotlib
 plt.figure(figsize=(10, 6))
 plt.imshow(cv2.cvtColor(result, cv2.COLOR_BGR2RGB))
 plt.axis("off")
